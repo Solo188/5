@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    accessibility_service_config.xml — конфигурация сервиса доступности.
+    Определяет, какие события получать и как взаимодействовать с окнами.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowContentChanged|typeViewTextChanged|typeViewClicked"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:notificationTimeout="100"
+    android:accessibilityFlags="flagReportViewIds|flagRetrieveInteractiveWindows"
+    android:canRetrieveWindowContent="true"
+    android:canPerformGestures="true"
+    android:settingsActivity="com.instacapture.MainActivity"
+    android:description="@string/accessibility_service_description"
+    android:packageNames="com.instagram.android" />

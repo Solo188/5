@@ -1,0 +1,45 @@
+# docker-compose.yml — оркестрация: PostgreSQL + FastAPI-сервер
+# Запуск: docker-compose up -d
+
+version: "3.8"
+
+services:
+  # ================== PostgreSQL ==================
+  db:
+    image: postgres:16-alpine
+    container_name: instacapture_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: instacapture
+      POSTGRES_PASSWORD: changeme_strong_password
+      POSTGRES_DB: instacapture
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5432:5432"  # Доступен только локально (безопасность)
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U instacapture"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ================== FastAPI Server ==================
+  app:
+    build: .
+    container_name: instacapture_app
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgresql://instacapture:changeme_strong_password@db:5432/instacapture
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    # Для production раскомментируйте:
+    # command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 4
+
+volumes:
+  postgres_data:
+    driver: local

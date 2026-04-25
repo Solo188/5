@@ -1,0 +1,24 @@
+# InstaCapture Server — зависимости Python
+# Установка: pip install -r requirements.txt
+
+# === Веб-фреймворк ===
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+
+# === База данных ===
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
+# === Telegram-бот ===
+aiogram==3.4.1
+
+# === Шифрование ===
+cryptography==42.0.1
+
+# === Конфигурация ===
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# === Вспомогательные ===
+python-dotenv==1.0.0

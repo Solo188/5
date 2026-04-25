@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основная палитра — Material 3 -->
+    <color name="primary">#E1306C</color>
+    <color name="primary_dark">#C13584</color>
+    <color name="secondary">#833AB4</color>
+    <color name="accent">#F77737</color>
+
+    <!-- Фон и поверхности -->
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#B3261E</color>
+
+    <!-- Текст -->
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_surface">#1C1B1F</color>
+    <color name="on_surface_variant">#49454F</color>
+</resources>

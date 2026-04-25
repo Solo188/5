@@ -1,0 +1,1 @@
+# app/__init__.py — пакет серверного приложения InstaCapture

@@ -1,0 +1,24 @@
+<resources>
+    <!--
+        Тема приложения — Material 3 (Material You).
+        Использует динамические цвета на Android 12+ (API 31).
+    -->
+    <style name="Theme.InstaCapture" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary</item>
+
+        <!-- Surface -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/error</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:navigationBarColor">@color/background</item>
+    </style>
+</resources>

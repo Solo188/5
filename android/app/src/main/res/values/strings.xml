@@ -1,0 +1,30 @@
+<resources>
+    <!-- Общие строки -->
+    <string name="app_name">InstaCapture</string>
+    <string name="accessibility_service_description">
+        InstaCapture отслеживает экран Instagram для автоматического сохранения данных аккаунтов (email, username, пароль) при регистрации. Данные шифруются и отправляются на ваш защищённый сервер.
+    </string>
+
+    <!-- Инструкции -->
+    <string name="instruction_step_1">1. Откройте Instagram</string>
+    <string name="instruction_step_2">2. Выйдите из текущего аккаунта (кнопка "Выйти")</string>
+    <string name="instruction_step_3">3. Начните регистрацию нового аккаунта</string>
+    <string name="instruction_warning">
+        Внимание: полная очистка данных Instagram без root невозможна. Рекомендуется вручную очистить данные в системных настройках для гарантии.
+    </string>
+
+    <!-- UI -->
+    <string name="status_active">Статус: АКТИВЕН</string>
+    <string name="status_inactive">Статус: НЕ АКТИВЕН</string>
+    <string name="btn_test_connection">Тестовое соединение с сервером</string>
+    <string name="btn_open_settings">Открыть настройки Accessibility</string>
+    <string name="btn_auto_logout">Автовыход из Instagram</string>
+    <string name="queue_empty">Очередь пуста</string>
+    <string name="accounts_list_title">Захваченные аккаунты</string>
+
+    <!-- Toast/Notifications -->
+    <string name="toast_data_captured">Данные захвачены и отправлены</string>
+    <string name="toast_data_queued">Нет сети — данные сохранены локально</string>
+    <string name="toast_service_started">InstaCapture активен — откройте Instagram</string>
+    <string name="toast_instagram_not_found">Instagram не установлен</string>
+</resources>
